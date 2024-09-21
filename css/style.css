@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --negativo: #0D0D0D;
+    --positivo: #F2F2F2;
+    --primario: #8065A6;
+    --secundario: #8C5884;
+    --terciario: #23468C;
+    --fondo: rgba(182, 128, 170, 0.4);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* GENERALES */
+
+body {
+    font-size: 18px;
+    color: var(--positivo);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    background-color: var(--negativo);
+    max-width: 1680px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+h1 {
+    display: none;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 1.25em;
+}
+
+strong {
+    color: #8C5884;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}
+
+/* HEADER */
+
+header {
+    margin: 0.5em;
+}
+
+header .logo img{
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+}
+
+nav ul li{
+    text-align: center;
+}
+
+nav ul li a {
+    min-width: 90%;
+    font-weight: 700;
+    display: inline-block;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: var(--primario);
+    color: var(--negativo);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+section h2 {
+    color: var(--primario);
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+#introduccion img {
+    margin: 1.5em auto;
+}
+
+#introduccion .bannerDesktop {
+    display: none;
+}
+
+#introduccion .tablaDatos {
+    border: 3px solid var(--primario);
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+#introduccion .tablaDatos div {
+    border: 3px solid var(--primario);
+}
+
+#introduccion .tablaDatos div p {
+    margin: 0.5em;
+}
+
+#introduccion .tablaDatos div:first-child {
+    border-radius: 10px 10px 0 0;
+    align-self: center;
+}
+
+#introduccion .tablaDatos div:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+#caracteristicas iframe {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+}
+
+#caracteristicas .grid-caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2em;
+}
+
+
+#caracteristicas div h3 {
+    border-bottom: 5px solid #8C5884;   
+    width: 100%;
+}
+
+#personajes .personajes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#personajes .personajes-grid div {
+    border-radius: 15px;
+    border: 3px solid var(--secundario);
+    background-color: var(--fondo);
+    padding: 1em;
+}
+
+#personajes .personajes-grid div h3 {
+    color: #FAE0C7;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+#personajes .personajes-grid div figure {
+    margin-bottom: 1em;
+}
+
+
+#personajes .personajes-grid div figure img {
+    margin: auto;
+}
+
+#personajes .personajes-grid div figure figcaption {
+    font-size: 0.5em;
+}
+
+
+#galeria .galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#sorteo {
+    background-color: var(--fondo);
+}
+
+#sorteo img {
+    margin: auto;
+}
+
+#sorteo h2 {
+    color: var(--negativo);
+}
+
+#sorteo .datosSorteo {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+#sorteo .datosSorteo input {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+#sorteo .acuerdosYcondiciones label {
+    font-size: 0.75em;
+}
+
+#sorteo .btn {
+    display: block;
+    padding: 1em 3em;
+    margin: 0.75em auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid var(--positivo);
+}
+
+.fontFamilyMain {
+    font-family: inherit;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+footer .datosPersonales a {
+    color: var(--secundario);
+    text-decoration: none;
+}
+
+footer .datosFoto {
+    margin-bottom: 0.75em;
+}
+
+footer .datosFoto img {
+    margin: auto;
+}
+
+
+
+/*Pantalla TABLET*/
+@media screen and (min-width:576px) {
+    #personajes .personajes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #galeria .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #sorteo{
+        text-align: center;
+    }
+
+    #sorteo .datosSorteo {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #sorteo .datosSorteo input {
+        width: 40%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer .datosPersonales {
+        align-self: center;
+    }   
+}
+
+/*Pantalla PC*/
+@media screen and (min-width:992px) {
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #introduccion .bannerDesktop {
+        display: block;
+    }
+
+    #introduccion .bannerMobile {
+        display: none;
+    }
+
+    #introduccion .intro-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #caracteristicas .grid-caracteristicas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    #caracteristicas .grid-caracteristicas div:last-child {
+        grid-column: 2/4;
+    }
+
+    #personajes .personajes-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #galeria .galeria-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #sorteo .btn:hover {
+        background-color: var(--secundario);
+        color: var(--positivo);
+    }
+    
+}
